@@ -1,51 +1,42 @@
-// import React from 'react';
-// import './button.scss';
-// /**
-//  * @author
-//  * @function Button
-//  **/
-
-// const Button = ({ title }) => {
-//   return <button className='button'>{title}</button>;
-// };
-
-// export default Button;
-
-
-
 import React, { useState, useEffect } from "react";
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import ButtonComp from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { green, purple } from '@material-ui/core/colors'
-
-import className from 'classnames';
 import PropTypes from "prop-types";
 
 const propTypes = {
+  /** Button color */
   color: PropTypes.string,
+  /** Custom class */
   className: PropTypes.string,
+  /** Button text */
   value: PropTypes.string,
+  /** Button Type (material-ui) */
   variant: PropTypes.string,
-  type: PropTypes.string
+   /** Button title */
+   title: PropTypes.string
 };
 const defaultProps = {
+  className:"",
   color: "primary",
-  variant:'outlined'
+  variant:"outlined",
+  title:"Button",
+  value:"Button"
+
 };
-const ButtonComp = ({ className, type, variant, color, value, title }) => {
-return <Button 
+const Button = ({ className, variant, color, value, title }) => {
+return <ButtonComp 
           variant={variant} 
           color={color} 
           title={title}
-          type={type ? type : null}
           className={`myButton ` + className}>
           {value}
-        </Button>
+        </ButtonComp>
        
 };
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
-export default ButtonComp;
+export default Button;
 
