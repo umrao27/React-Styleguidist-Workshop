@@ -7,7 +7,7 @@ module.exports = {
   version,
   components: '../src/components/[A-Z]**/*.js', // index.js
   ignore: ['**/src/test.js'],
-  require: ['./src/styles/index.scss'],
+  require: ['./src/styles/styles.scss'],
   styles:{
     fontFaily:{
       base:['"Open Sans", Arial, Helvetia, sans-serif']
@@ -24,7 +24,7 @@ module.exports = {
         },
         {
           test: /\.scss$/,
-          use: ['style-loader', 'css-loader']
+          use: ['style-loader', 'css-loader','sass-loader']
         }
       ]
     }

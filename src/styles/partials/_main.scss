@@ -1,0 +1,29 @@
+@import "../variables/variables";
+
+#rsg-root {
+  main[class^="rsg--content"] {
+    display: block;
+    padding: 0 50px 16px;
+    margin: 0 !important;
+    max-width: 100% !important;
+    section[data-testid^="section-section-containers"]
+      > div[class^="rsg--wrapper"] {
+      display: none;
+    }
+
+    header[class^="rsg--header"] {
+      padding: 16px 48px 8px;
+      margin: 0 -48px 16px;
+      background: $header_background;
+      line-height: 40px;
+    }
+    header[class^="rsg--header"] div h3 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    header[class^="rsg--header"] div h3 a:hover {
+      text-decoration: none;
+      cursor: initial;
+    }
+  }
+}
