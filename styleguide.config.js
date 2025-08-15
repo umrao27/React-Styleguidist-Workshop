@@ -5,7 +5,7 @@ module.exports = {
   title: 'React Styleguidist Workshop',
   sections: [...sections],
   version,
-  components: '../src/components/[A-Z]**/*.js', // index.js
+  components: '../src/components/[A-Z]**/*.js', 
   ignore: ['**/src/test.js'],
   require: ['./src/styles/styles.scss'],
   styles:{
